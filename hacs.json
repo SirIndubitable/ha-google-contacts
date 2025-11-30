@@ -1,0 +1,8 @@
+
+{
+  "name": "Anniversaries",
+  "zip_release": true,
+  "filename": "anniversaries.zip",
+  "domains": ["anniversaries", "sensor"],
+  "homeassistant": "0.109.0"
+}
