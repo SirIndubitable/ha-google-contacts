@@ -1,8 +1,9 @@
-
 {
-  "name": "Anniversaries",
+  "name": "Google Contacts",
   "zip_release": true,
-  "filename": "anniversaries.zip",
-  "domains": ["anniversaries", "sensor"],
-  "homeassistant": "0.109.0"
+  "filename": "google_contacts.zip",
+  "domains": [
+    "calendar"
+  ],
+  "homeassistant": "2025.1.0"
 }

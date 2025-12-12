@@ -1,0 +1,20 @@
+{
+  "config_subentries": {
+    "calendar": {
+      "entry_type": "Calendar",
+      "step": {
+        "initiate_flow": {
+          "user": "Add Contact Calendar",
+          "reconfigure": "Reconfigure Contact Calendar"
+        },
+        "configure": {
+          "event_display_name": "Event display name priority",
+          "group": "Contact group to use (leave blank for all contacts)",
+          "name": "Name of the calendar",
+          "show_year": "Show year in event titles"
+        }
+      },
+      "title": "Calendar configuration"
+    }
+  }
+}

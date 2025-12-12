@@ -1,6 +1,6 @@
 {
-  "domain": "google_contacts_calendar",
-  "name": "google-contacts-calendar",
+  "domain": "google_contacts",
+  "name": "Google Contacts",
   "codeowners": [
     "@SirIndubitable"
   ],
@@ -9,9 +9,9 @@
     "application_credentials"
   ],
   "documentation": "https://www.home-assistant.io/integrations/google_contacts_calendar",
-  "homekit": {},
   "iot_class": "cloud_polling",
-  "requirements": [],
-  "ssdp": [],
-  "zeroconf": []
+  "requirements": [
+    "google-api-python-client==2.71.0"
+  ],
+  "version": "0.1.0"
 }
