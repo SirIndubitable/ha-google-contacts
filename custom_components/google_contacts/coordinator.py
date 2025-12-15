@@ -119,7 +119,11 @@ class ContactEvent:
 
     def sort_key(self, now: date) -> tuple[date, str, str]:
         """Return a tuple to use as a sort key."""
-        return (self.next_date(now), self.type, self.name)
+        return (
+            self.next_date(now),
+            self.type,
+            self.names.get("displayName", "Unknown"),
+        )
 
 
 class DataContextManager:
@@ -247,7 +251,6 @@ class ContactsStore(Store[dict[str, Any]]):
 
         self._groups = GroupsResponse.from_dict(data.get("groups", {}))
         self._contacts = ContactsResponse.from_dict(data.get("contacts", {}))
-
 
     async def _async_save_contacts(self) -> None:
         """Save contacts data to storage."""
