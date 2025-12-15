@@ -1,0 +1,23 @@
+name: Home Assistant Google Contacts Integration Continuous Integration
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  build:
+    name: Check linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Install the code linting and formatting tools
+        run: pip install ruff
+      - name: Lint code with Ruff
+        run: ruff check --output-format=github
+      - name: Check code formatting with Ruff
+        run: ruff format --diff
+        continue-on-error: true

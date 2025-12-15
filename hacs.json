@@ -1,7 +1,5 @@
 {
   "name": "Google Contacts",
-  "zip_release": true,
-  "filename": "google_contacts.zip",
   "domains": [
     "calendar"
   ],
