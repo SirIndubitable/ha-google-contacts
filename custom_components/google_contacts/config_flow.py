@@ -11,11 +11,9 @@ from googleapiclient.http import HttpRequest
 
 from homeassistant.config_entries import (
     SOURCE_REAUTH,
-    SOURCE_USER,
     ConfigEntry,
     ConfigFlowResult,
     ConfigSubentryFlow,
-    FlowType,
     SubentryFlowResult,
 )
 from homeassistant.const import CONF_ACCESS_TOKEN, CONF_NAME, CONF_TOKEN, Platform
