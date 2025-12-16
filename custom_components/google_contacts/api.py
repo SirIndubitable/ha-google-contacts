@@ -1,4 +1,4 @@
-"""API for google-contacts-calendar bound to Home Assistant OAuth."""
+"""API for google-contacts bound to Home Assistant OAuth."""
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
@@ -435,14 +435,14 @@ class GroupsRequest(PeopleRequestTemplate[GroupsResponse]):
 
 
 class GoogleContactsApi:
-    """Provide google-contacts-calendar authentication tied to an OAuth2 based config entry."""
+    """Provide google-contacts authentication tied to an OAuth2 based config entry."""
 
     def __init__(
         self,
         hass: HomeAssistant,
         oauth_session: config_entry_oauth2_flow.OAuth2Session,
     ) -> None:
-        """Initialize google-contacts-calendar auth."""
+        """Initialize google-contacts auth."""
         self._hass = hass
         self._oauth_session = oauth_session
 

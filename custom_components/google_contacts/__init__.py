@@ -1,4 +1,4 @@
-"""The google-contacts-calendar integration."""
+"""The google-contacts integration."""
 
 from __future__ import annotations
 
