@@ -1,4 +1,4 @@
-"""Application credentials platform for the google-contacts-calendar integration."""
+"""Application credentials platform for the google-contacts integration."""
 
 from homeassistant.components.application_credentials import AuthorizationServer
 from homeassistant.core import HomeAssistant

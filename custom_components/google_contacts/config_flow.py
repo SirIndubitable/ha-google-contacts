@@ -21,7 +21,7 @@ from homeassistant.core import callback
 from homeassistant.helpers import config_entry_oauth2_flow
 from homeassistant.helpers.entity import async_generate_entity_id
 
-from .const import DOMAIN, OAUTH2_SCOPES
+from .const import DOMAIN, LOGGER_NAME, OAUTH2_SCOPES
 from .schema import OPTIONS_SCHEMA as CONFIG_SCHEMA
 
 ENTITY_ID_FORMAT = Platform.CALENDAR + ".{}"
@@ -37,7 +37,7 @@ class OAuth2FlowHandler(
     @property
     def logger(self) -> logging.Logger:
         """Return logger."""
-        return logging.getLogger(__name__)
+        return logging.getLogger(LOGGER_NAME)
 
     @property
     def extra_authorize_data(self) -> dict[str, Any]:

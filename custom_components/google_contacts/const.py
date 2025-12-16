@@ -1,4 +1,4 @@
-"""Constants for the google-contacts-calendar integration."""
+"""Constants for the google-contacts integration."""
 
 DOMAIN = "google_contacts"
 
@@ -8,3 +8,5 @@ OAUTH2_SCOPES = [
     "https://www.googleapis.com/auth/contacts.readonly",
     "https://www.googleapis.com/auth/userinfo.profile",
 ]
+
+LOGGER_NAME = DOMAIN

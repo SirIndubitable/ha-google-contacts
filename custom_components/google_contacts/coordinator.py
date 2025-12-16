@@ -22,12 +22,12 @@ from .api import (
     GoogleContactsApiError,
     GroupsResponse,
 )
-from .const import DOMAIN
+from .const import DOMAIN, LOGGER_NAME
 from .schema import Options
 
 type GoogleContactsConfigEntry = ConfigEntry[ContactsUpdateCoordinator]
 
-_LOGGER = logging.getLogger(__name__)
+_LOGGER = logging.getLogger(LOGGER_NAME)
 
 UPDATE_INTERVAL: Final = timedelta(minutes=30)
 TIMEOUT = 10

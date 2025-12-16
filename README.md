@@ -4,7 +4,7 @@
 ![maintained](https://img.shields.io/maintenance/yes/2026.svg)
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/SirIndubitable/ha-google-contacts">
 [![hacs_badge](https://img.shields.io/badge/hacs-custom-yellow.svg)](https://github.com/custom-components/hacs)
-[![ha_version](https://img.shields.io/badge/home%20assistant-2025.1.0%2B-green.svg)](https://www.home-assistant.io)
+[![ha_version](https://img.shields.io/badge/home%20assistant-2025.12.0%2B-green.svg)](https://www.home-assistant.io)
 ![version](https://img.shields.io/badge/version-0.1.0-yellow.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/mit)
 
@@ -37,14 +37,14 @@ You can install this card by following one of the guides below:
 
 [![Add the integration to my home assistant .](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=google-contacts)
 
-Google Contacts integreation uses configuration subentries for configuring the sensors.
+Google Contacts integration uses configuration subentries for configuring the sensors.
 1. Setup the configuration once per user you want contact information from
 2. Create one or multiple configuration subentries using the users contacts
 
 ### Calendar Subentry
 ___
 The calendar subentry creates a calendar with dates relevant to your contacts (ie. Birthdays and/or Anniversaries)<br/>
-This is similar to the builtin google birthdays calendar, but gives a little more flexability in filtering and how it is displayed
+This is similar to the builtin google birthdays calendar, but gives a little more flexibility in filtering and how it is displayed
 
 #### Configuration options:
 | Option             | Description                                        |
