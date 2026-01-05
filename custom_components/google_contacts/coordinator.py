@@ -1,5 +1,6 @@
 """Coordinator for fetching data from Google Contacts API."""
 
+from aiodns.error import DNSError
 import asyncio
 from collections.abc import AsyncGenerator, Sequence
 from contextlib import asynccontextmanager
@@ -363,6 +364,13 @@ class ContactsUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             await self._async_request_get_contacts(store)
             return
 
+        except DNSError as dnsError:
+            _LOGGER.error(
+                "DNS error synchronizing contacts: %s. Not performing update",
+                dnsError,
+            )
+            return
+
         for contact in contacts.contacts.values():
             if contact.deleted:
                 _LOGGER.info("Removing contact: %s", contact.resource_name)
@@ -399,6 +407,13 @@ class ContactsUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
                 error,
             )
             await self._async_request_get_groups(store)
+            return
+
+        except DNSError as dnsError:
+            _LOGGER.error(
+                "DNS error synchronizing groups: %s. Not performing update",
+                dnsError,
+            )
             return
 
         for group in groups.groups.values():
