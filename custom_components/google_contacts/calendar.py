@@ -1,4 +1,4 @@
-"""Google Contacts todo platform."""
+"""Google Contacts platform."""
 
 from __future__ import annotations
 
